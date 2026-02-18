@@ -81,10 +81,10 @@ void uart2_rxtx_init(void)
 
 
 
-RCC->APB1ENR |=UART2EN;
-uart_set_baudrate(USART2,APB1_CLK,UART_BAUDRATE);
-USART2->CR1 =CR1_TE |CR1_RE;
-USART2->CR1 |=CR1_UE;
+	RCC->APB1ENR |=UART2EN;
+	uart_set_baudrate(USART2,APB1_CLK,UART_BAUDRATE);
+	USART2->CR1 =CR1_TE |CR1_RE;
+	USART2->CR1 |=CR1_UE;
 
 
 }
